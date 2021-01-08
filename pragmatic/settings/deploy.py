@@ -24,7 +24,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django',
-        'USER': 'admin',
+        'USER': 'django',
         'PASSWORD': '1234',
         'HOST': 'mariadb',
         'PORT': '3306',
