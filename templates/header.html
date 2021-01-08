@@ -1,0 +1,17 @@
+<div class="header">
+    <div>
+        <h1 class="main-font">Pragmatic</h1>
+    </div>
+    <div class="header-navbar">
+        <a href="{% url 'articleapp:list' %}" class="nav-item"><span>Articles</span></a>
+        <a href="{% url 'projectapp:list' %}" class="nav-item"><span>Projects</span></a>
+        <a href="{% url 'subscribeapp:list' %}" class="nav-item"><span>Subscription</span></a>
+        {% if not user.is_authenticated %}
+        <a href="{% url 'accountapp:login' %}?next={{ request.path }}" class="nav-item"><span>Login</span></a>
+        <a href="{% url 'accountapp:create' %}?next={{ request.path }}" class="nav-item"><span>Sign Up</span></a>
+        {% else %}
+        <a href="{% url 'accountapp:detail' pk=user.pk %}" class="nav-item"><span>MyPage</span></a>
+        <a href="{% url 'accountapp:logout' %}?next={{ request.path }}" class="nav-item"><span>Logout</span></a>
+        {% endif %}
+    </div>
+</div>
