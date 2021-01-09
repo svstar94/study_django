@@ -4,6 +4,9 @@ db.sqlite3
 
 *_pycache_*
 
-media
+*.png
+*.jpg
 
 /db_backup.sqlite3
+
+*staticfiles*
